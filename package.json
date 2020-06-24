@@ -1,11 +1,19 @@
 {
   "name": "@winner-fed/stylelint-config-win",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "CSS Style guide for winner fed",
   "keywords": [
     "stylelint",
     "stylelint-config",
-    "stylelint-config-win"
+    "stylelint-config-win",
+    "css",
+    "style",
+    "lint",
+    "linter",
+    "check",
+    "checker",
+    "strict",
+    "validate"
   ],
   "author": "winner fed",
   "license": "MIT",
@@ -16,21 +24,18 @@
   "main": "./index.js",
   "files": [
     "index.js",
-    "rules.js",
-    ".prettierrc.js",
     "README.md",
     "package.json"
   ],
   "dependencies": {
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-prettier": "^1.1.2",
     "stylelint-order": "^4.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "stylelint": "^13.5.0"
+  },
   "peerDependencies": {
-    "prettier": "^2.0.5",
     "stylelint": ">=13.5.0"
   },
   "bugs": {
