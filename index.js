@@ -20,7 +20,8 @@ module.exports = {
   // 先写定位，再写盒模型，再写内容区样式，最后写 CSS3 相关属性
   plugins: [
     'stylelint-order',
-    'stylelint-declaration-block-no-ignored-properties'
+    'stylelint-declaration-block-no-ignored-properties',
+    'stylelint-z-index-value-constraint'
   ],
   extends: [
     'stylelint-config-standard'
@@ -551,6 +552,7 @@ module.exports = {
     // 不允许在同一规则中由于另一个属性值而忽略的属性值
     // a { display: inline; width: 100px; } -> width: 100px 就是多余的属性
     'plugin/declaration-block-no-ignored-properties': true,
+
     // `stylelint-order`
     // https://github.com/hudochenkov/stylelint-order
     'order/order': [
@@ -707,6 +709,13 @@ module.exports = {
       'set-link-source',
       'unicode-bidi',
       'speak'
-    ]
+    ],
+
+    // `stylelint-z-index-value-constraint`
+    // https://github.com/kristerkari/stylelint-z-index-value-constraint
+    'plugin/z-index-value-constraint': {
+      'min': 1,
+      'max': 100
+    }
   }
 };
