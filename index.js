@@ -123,7 +123,20 @@ module.exports = {
     // 注释标记的内部使用空格
     'comment-whitespace-inside': 'always',
     // 指定一个不允许出现在注释中的单词的黑名单
-    'comment-word-blacklist': null,
+    'comment-word-blacklist': [
+      [
+        /^TODO:/,
+        /^FIXME:/,
+        'fuck',
+        'shit',
+        'damn',
+        'twerk',
+        'egg yolk'
+      ],
+      {
+        severity: 'warning'
+      }
+    ],
 
     // ************ Custom media ************
     // 指定一个自定义媒体查询名称的匹配模式
@@ -162,9 +175,16 @@ module.exports = {
       }
     ],
     // 禁止使用可以缩写却不缩写的属性
-    'declaration-block-no-redundant-longhand-properties': null,
+    'declaration-block-no-redundant-longhand-properties': [
+      true,
+      {
+        ignoreShorthands: [
+          'grid-template'
+        ]
+      }
+    ],
     // 不允许简写属性覆盖相关手写属性声明块
-    'declaration-block-no-shorthand-property-overrides': null,
+    'declaration-block-no-shorthand-property-overrides': true,
     // 声明块多行分号后需要换行符
     'declaration-block-semicolon-newline-after': 'always-multi-line',
     // 在声明块的分号之前要求有一个换行符或禁止有空白
@@ -215,7 +235,7 @@ module.exports = {
 
     // ************ Font weight ************
     // 指定 `font-weight` 的值必须是数字
-    // 'font-weight-notation': 'numeric',
+    'font-weight-notation': 'named-where-possible',
 
     // ************ Function ************
     // 指定禁用函数的黑名单：暂无
@@ -261,21 +281,29 @@ module.exports = {
     // 禁止 在关键帧声明中 !important
     'keyframe-declaration-no-important': true,
     // 指定关键帧名称的模式
-    'keyframes-name-pattern': null,
+    'keyframes-name-pattern': reLowerCase,
 
     // ************ Length ************
     // 零不带单位
     'length-zero-no-unit': true,
 
     // 指定Unix或Windows换行符
-    'linebreaks': null,
+    'linebreaks': 'unix',
 
     // 限制相邻空行的数量
-    'max-empty-lines': 1,
+    'max-empty-lines': 2,
     // 限制单行的长度
     'max-line-length': 500,
     // 限制允许嵌套的深度
-    'max-nesting-depth': 10,
+    'max-nesting-depth': [
+      8,
+      {
+        // 伪类选择器
+        ignore: [
+          'pseudo-classes'
+        ]
+      }
+    ],
 
     // ************ Media ************
     // media功能中的冒号后空格
@@ -289,7 +317,7 @@ module.exports = {
     // 不允许未知的媒体特性名称
     'media-feature-name-no-unknown': true,
     // 禁止 media 特性名称带有浏览器引擎前缀
-    'media-feature-name-no-vendor-prefix': null,
+    'media-feature-name-no-vendor-prefix': true,
     // 指定允许的 media 功能名称和值对的白名单
     'media-feature-name-value-whitelist': null,
     // 指定允许使用的 media 特性名称的白名单
@@ -311,10 +339,16 @@ module.exports = {
     // 媒体查询列表中的逗号后面不允许空格
     'media-query-list-comma-space-before': 'never',
 
-
     // ************ No ************
     // 允许低优先级的选择器出现在高优先级的选择器之后（暂时允许）
-    'no-descending-specificity': null,
+    'no-descending-specificity': [
+      true,
+      {
+        ignore: [
+          'selectors-within-list'
+        ]
+      }
+    ],
     // 禁止@import样式表中的重复规则
     'no-duplicate-at-import-rules': true,
     // 禁用 不允许重复的选择器
@@ -354,7 +388,6 @@ module.exports = {
     'property-no-vendor-prefix': null,
     // 指定一个允许使用的属性的白名单
     'property-whitelist': null,
-
 
     // 多条规则前空行
     'rule-empty-line-before': [
@@ -461,7 +494,7 @@ module.exports = {
 
     // ************ Shorthand property ************
     // 禁止在简写属性中使用冗余值
-    'shorthand-property-no-redundant-values': null,
+    'shorthand-property-no-redundant-values': true,
 
     // ************ String ************
     // 禁止在字符串（转义）换行
@@ -475,7 +508,7 @@ module.exports = {
 
     // ************ Unit ************
     // 关闭 Unicode 字节顺序标志
-    'unicode-bom': null,
+    'unicode-bom': 'never',
     // 指定一个禁止使用的单位的黑名单
     'unit-blacklist': null,
     // 单位的小写
@@ -489,7 +522,15 @@ module.exports = {
     // 指定关键字的值的大小写
     'value-keyword-case': 'lower',
     // 允许给值添加浏览器引擎前缀
-    'value-no-vendor-prefix': null,
+    'value-no-vendor-prefix': [
+      true,
+      {
+        ignoreValues: [
+          'grab',
+          'grabbing'
+        ]
+      }
+    ],
 
     // ************ Value List ************
     // 多行值列表的逗号后换行
