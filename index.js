@@ -380,10 +380,12 @@ module.exports = {
     // 属性指定小写
     'property-case': 'lower',
     // 禁止使用未知属性
-    'property-no-unknown': [true,
+    'property-no-unknown': [
+      true,
       {
         'ignoreProperties': ['composes']
-      }],
+      }
+    ],
     // 禁止属性使用浏览器引擎前缀
     'property-no-vendor-prefix': null,
     // 指定一个允许使用的属性的白名单
@@ -512,7 +514,7 @@ module.exports = {
     // 指定一个禁止使用的单位的黑名单
     'unit-blacklist': null,
     // 单位的小写
-    'unit-case': 'lower',
+    'unit-case': null,
     // 禁止未知的单位
     'unit-no-unknown': true,
     // 指定一个所允许的单位的白名单
