@@ -157,7 +157,7 @@ module.exports = {
     // 不允许简写属性覆盖相关手写属性声明块
     'declaration-block-no-shorthand-property-overrides': true,
     // 声明块多行分号后需要换行符
-    'declaration-block-semicolon-newline-after': 'always-multi-line',
+    'declaration-block-semicolon-newline-after': 'always',
     // 在声明块的分号之前要求有一个换行符或禁止有空白
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     // 单行声明块分号后一个空格
@@ -175,26 +175,19 @@ module.exports = {
     // 声明冒号之前禁止空格
     'declaration-colon-space-before': 'never',
     // 声明之前使用空行
-    'declaration-empty-line-before': [
-      'always',
-      {
-        except: [
-          'after-declaration', // 一个声明之后的声明不加空行
-          'first-nested'
-        ],
-        ignore: ['after-comment', 'inside-single-line-block']
-      }
-    ],
-    // 禁止在声明中使用 !important
-    'declaration-no-important': null,
-    // 指定一个在声明中禁止使用的属性和单位的黑名单
-    'declaration-property-unit-blacklist': null,
-    // 指定一个在声明中允许使用的属性和单位的白名单
-    'declaration-property-unit-whitelist': null,
+    'declaration-empty-line-before': 'never',
     // 指定一个在声明中禁止使用的属性和值的黑名单
-    'declaration-property-value-blacklist': null,
-    // 指定一个在声明中禁止使用的属性和值的白名单
-    'declaration-property-value-whitelist': null,
+    'declaration-property-value-blacklist': {
+			'/^border(?!-(width|spacing))/': [
+				/thin/,
+				/medium/,
+				/thick/,
+				'0' // Prefer `none`
+			],
+			'/^transition/': [
+				/all/
+			]
+		},
 
     // ************ Font family ************
     // 指定字体名称当推荐使用引号时再使用引号
@@ -221,10 +214,8 @@ module.exports = {
     'function-comma-newline-before': 'never-multi-line',
     // 单行功能的逗号后一个空格
     'function-comma-space-after': 'always-single-line',
-    // 功能的逗号前不加空格
-    'function-comma-space-before': 'never',
     // 在linear-gradient()调用中，不允许根据标准语法无效的方向值。
-    'function-linear-gradient-no-nonstandard-direction': null,
+    'function-linear-gradient-no-nonstandard-direction': true,
     // 允许的最大相邻空行数0
     'function-max-empty-lines': 0,
     // 函数名称指定为小写
