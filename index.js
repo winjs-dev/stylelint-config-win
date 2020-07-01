@@ -82,19 +82,11 @@ module.exports = {
     // 右括号之后换行
     'block-closing-brace-newline-after': 'always',
     // 多行块右括号之前换行
-    'block-closing-brace-newline-before': 'always-multi-line',
-    // 单行块右括号后有空格
-    'block-closing-brace-space-after': null,
-    // 单行块右括号前一个空格
-    'block-closing-brace-space-before': 'always-single-line',
+    'block-closing-brace-newline-before': 'always',
     // 不允许空块
     'block-no-empty': true,
     // 多行，块开放括号（左括号）之后换行
-    'block-opening-brace-newline-after': 'always-multi-line',
-    // 单行，块开括号（左括号）之前不换行
-    'block-opening-brace-newline-before': 'never-single-line',
-    // 单行块开括号后空格
-    'block-opening-brace-space-after': 'always-single-line',
+    'block-opening-brace-newline-after': 'always',
     // 开括号前一个空格
     'block-opening-brace-space-before': 'always',
 
@@ -138,28 +130,6 @@ module.exports = {
         severity: 'warning'
       }
     ],
-
-    // ************ Custom media ************
-    // 指定一个自定义媒体查询名称的匹配模式
-    'custom-media-pattern': 'always',
-
-    // ************ Custom property ************
-    // 自定义属性前使用空行
-    'custom-property-empty-line-before': [
-      'always',
-      {
-        except: [
-          'after-custom-property', // 自定义属性之后的自定义属性
-          'first-nested'
-        ],
-        ignore: [
-          'after-comment', // 忽略注释后的自定义属性
-          'inside-single-line-block' // 忽略单行块内的自定义属性
-        ]
-      }
-    ],
-    // 为自定义属性指定一个匹配模式
-    'custom-property-pattern': null,
 
     // ************ Declaration ************
     // 声明后禁止使用空格
