@@ -314,7 +314,7 @@ module.exports = {
     // 禁止@import样式表中的重复规则
     'no-duplicate-at-import-rules': true,
     // 禁用 不允许重复的选择器
-    'no-duplicate-selectors': null,
+    'no-duplicate-selectors': true,
     // 不允许空的来源
     'no-empty-source': true,
     // 禁止行尾空格
@@ -332,7 +332,7 @@ module.exports = {
     // 小数部分小于或等于1的前导零 不允许 .5
     'number-leading-zero': 'always',
     // 限制小数位数
-    'number-max-precision': null,
+    'number-max-precision': 3,
     // 禁止数字尾随零 1.0 / 0.50
     'number-no-trailing-zeros': true,
 
@@ -349,18 +349,33 @@ module.exports = {
       }
     ],
     // 禁止属性使用浏览器引擎前缀
-    'property-no-vendor-prefix': null,
+    'property-no-vendor-prefix': [
+			true,
+			{
+				ignoreProperties: [
+					'app-region', // For Electron
+					'appearance',
+					'mask',
+					'tab-size' // It's still only prefixed in Firefox
+				]
+			}
+		],
     // 指定一个允许使用的属性的白名单
     'property-whitelist': null,
 
     // 多条规则前空行
     'rule-empty-line-before': [
-      'always-multi-line',
-      {
-        except: ['first-nested'],
-        ignore: ['after-comment']
-      }
-    ],
+			'always',
+			{
+				except: [
+					'after-single-line-comment',
+					'first-nested'
+				],
+				ignore: [
+					'after-comment'
+				]
+			}
+		],
 
     // ************ Selector ************
     // 属性选择器内的括号内不允许空格
