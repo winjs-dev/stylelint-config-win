@@ -25,6 +25,7 @@ It is recommended to use with VSCode plugin [stylelint-stzhang](https://marketpl
 - [https://stylelint.io/](https://stylelint.io/)
 - [http://stylelint.cn/user-guide/rules/](http://stylelint.cn/user-guide/rules/)
 - [stylelint-config-moresec](https://github.com/MoresecFE/stylelint-config-moresec)
+- [css-order](https://github.com/cklwblove/note-css-order)
 
 
 ## 环境
