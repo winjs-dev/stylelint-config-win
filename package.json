@@ -1,6 +1,6 @@
 {
   "name": "@winner-fed/stylelint-config-win",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "CSS Style guide for winner fed",
   "keywords": [
     "stylelint",
@@ -24,6 +24,7 @@
   "main": "./index.js",
   "files": [
     "index.js",
+    "properties-order.js",
     "README.md",
     "package.json"
   ],
