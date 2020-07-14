@@ -426,8 +426,6 @@ module.exports = {
     'selector-max-compound-selectors': 8,
     // 限制选择器中相邻空行的数量
     'selector-max-empty-lines': 0,
-    // 限制选择器中ID选择器的数量
-    'selector-max-id': 5,
     // 限制选择器中伪类的数量
     'selector-max-pseudo-class': 8,
     // 限制选择器的优先级
