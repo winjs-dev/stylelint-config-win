@@ -255,7 +255,7 @@ module.exports = {
     'max-line-length': 500,
     // 限制允许嵌套的深度
     'max-nesting-depth': [
-      8,
+      5,
       {
         // 伪类选择器
         ignore: [
