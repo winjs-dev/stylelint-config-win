@@ -155,8 +155,6 @@ module.exports = {
     ],
     // 不允许简写属性覆盖相关手写属性声明块
     'declaration-block-no-shorthand-property-overrides': true,
-    // 声明块多行分号后需要换行符
-    'declaration-block-semicolon-newline-after': 'always',
     // 在声明块的分号之前要求有一个换行符或禁止有空白
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     // 单行声明块分号后一个空格
