@@ -25,9 +25,6 @@ module.exports = {
     'stylelint-declaration-block-no-ignored-properties',
     'stylelint-z-index-value-constraint'
   ],
-  extends: [
-    'stylelint-config-standard'
-  ],
   rules: {
     // ************ At-rule ************
     // 指定一个禁止使用的 at 规则的黑名单

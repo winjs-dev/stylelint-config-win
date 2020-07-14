@@ -1,6 +1,6 @@
 {
   "name": "@winner-fed/stylelint-config-win",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "CSS Style guide for winner fed",
   "keywords": [
     "stylelint",
@@ -29,7 +29,6 @@
     "package.json"
   ],
   "dependencies": {
-    "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-z-index-value-constraint": "^1.1.0",
     "stylelint-order": "^4.1.0"
