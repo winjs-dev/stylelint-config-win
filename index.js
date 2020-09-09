@@ -175,16 +175,16 @@ module.exports = {
     'declaration-empty-line-before': 'never',
     // 指定一个在声明中禁止使用的属性和值的黑名单
     'declaration-property-value-blacklist': {
-			'/^border(?!-(width|spacing))/': [
-				/thin/,
-				/medium/,
-				/thick/,
-				'0' // Prefer `none`
-			],
-			'/^transition/': [
-				/all/
-			]
-		},
+      '/^border(?!-(width|spacing))/': [
+        /thin/,
+        /medium/,
+        /thick/,
+        '0' // Prefer `none`
+      ],
+      '/^transition/': [
+        /all/
+      ]
+    },
 
     // ************ Font family ************
     // 指定字体名称当推荐使用引号时再使用引号
@@ -347,32 +347,32 @@ module.exports = {
     ],
     // 禁止属性使用浏览器引擎前缀
     'property-no-vendor-prefix': [
-			true,
-			{
-				ignoreProperties: [
-					'app-region', // For Electron
-					'appearance',
-					'mask',
-					'tab-size' // It's still only prefixed in Firefox
-				]
-			}
-		],
+      true,
+      {
+        ignoreProperties: [
+          'app-region', // For Electron
+          'appearance',
+          'mask',
+          'tab-size' // It's still only prefixed in Firefox
+        ]
+      }
+    ],
     // 指定一个允许使用的属性的白名单
     'property-whitelist': null,
 
     // 多条规则前空行
     'rule-empty-line-before': [
-			'always',
-			{
-				except: [
-					'after-single-line-comment',
-					'first-nested'
-				],
-				ignore: [
-					'after-comment'
-				]
-			}
-		],
+      'always',
+      {
+        except: [
+          'after-single-line-comment',
+          'first-nested'
+        ],
+        ignore: [
+          'after-comment'
+        ]
+      }
+    ],
 
     // ************ Selector ************
     // 属性选择器内的括号内不允许空格
@@ -428,7 +428,9 @@ module.exports = {
     // 限制选择器中类型选择器的数量
     'selector-max-type': 8,
     // 限制选择器中通用选择器的数量
-    'selector-max-universal': 1,
+    'selector-max-universal': [1, {
+      'severity': 'warning'
+    }],
     // 指定一个嵌套选择器的匹配模式
     'selector-nested-pattern': null,
     // 禁止按类型限定选择器
