@@ -102,14 +102,6 @@ module.exports = {
     'color-no-invalid-hex': true,
 
     // ************ Comment ************
-    // 注释之前空行
-    'comment-empty-line-before': [
-      'always',
-      {
-        except: ['first-nested'], // 父节点第一个注释不空行
-        ignore: ['stylelint-commands'] // stylelint的注释
-      }
-    ],
     // 不允许空的评论
     'comment-no-empty': true,
     // 注释标记的内部使用空格
@@ -191,12 +183,16 @@ module.exports = {
     'font-family-name-quotes': 'always-where-recommended',
     // 禁止使用重复的字体名称
     'font-family-no-duplicate-names': true,
-    // 禁止在字体系列名称列表中缺少通用系列
-    'font-family-no-missing-generic-family-keyword': true,
+    // 推荐在字体系列名称列表中使用通用系列
+    'font-family-no-missing-generic-family-keyword': [true,  {
+      severity: 'warning'
+    }],
 
     // ************ Font weight ************
     // 指定 `font-weight` 的值必须是数字
-    'font-weight-notation': 'named-where-possible',
+    'font-weight-notation': ['named-where-possible', {
+      severity: 'warning'
+    }],
 
     // ************ Function ************
     // 指定禁用函数的黑名单：暂无
@@ -221,8 +217,10 @@ module.exports = {
     'function-parentheses-newline-inside': 'always-multi-line',
     // 单行功能括号内不加空格
     'function-parentheses-space-inside': 'never-single-line',
-    // 禁止使用相对协议的链接
-    'function-url-no-scheme-relative': true,
+    // 推荐使用相对协议的链接
+    'function-url-no-scheme-relative': [true, {
+      severity: 'warning'
+    }],
     // 要求或禁止 url 使用引号
     'function-url-quotes': 'always',
     // 指定一个允许的 url 协议的白名单
@@ -251,8 +249,6 @@ module.exports = {
 
     // 限制相邻空行的数量
     'max-empty-lines': 2,
-    // 限制单行的长度
-    'max-line-length': 500,
     // 限制允许嵌套的深度
     'max-nesting-depth': [
       5,
@@ -329,7 +325,9 @@ module.exports = {
     // 小数部分小于或等于1的前导零 不允许 .5
     'number-leading-zero': 'always',
     // 限制小数位数
-    'number-max-precision': 3,
+    'number-max-precision': [3, {
+      severity: 'warning'
+    }],
     // 禁止数字尾随零 1.0 / 0.50
     'number-no-trailing-zeros': true,
 
@@ -412,21 +410,21 @@ module.exports = {
     // 选择器列表的逗号前不允许空格
     'selector-list-comma-space-before': 'never',
     // 限制选择器中属性选择器的数量
-    'selector-max-attribute': 8,
+    'selector-max-attribute': [8, {
+      'severity': 'warning'
+    }],
     // 限制选择器中的类数
-    'selector-max-class': 8,
-    // 限制选择器中组合器的数量
-    'selector-max-combinators': 8,
+    'selector-max-class': [8, {
+      'severity': 'warning'
+    }],
     // 限制复合选择器的数量
-    'selector-max-compound-selectors': 8,
+    'selector-max-compound-selectors': [8, {
+      'severity': 'warning'
+    }],
     // 限制选择器中相邻空行的数量
     'selector-max-empty-lines': 0,
-    // 限制选择器中伪类的数量
-    'selector-max-pseudo-class': 8,
     // 限制选择器的优先级
     'selector-max-specificity': null,
-    // 限制选择器中类型选择器的数量
-    'selector-max-type': 8,
     // 限制选择器中通用选择器的数量
     'selector-max-universal': [1, {
       'severity': 'warning'
@@ -480,7 +478,9 @@ module.exports = {
 
     // ************ Time ************
     // 指定时间值的最小毫秒数
-    'time-min-milliseconds': 100,
+    'time-min-milliseconds': [100, {
+      severity: 'warning'
+    }],
 
     // ************ Unit ************
     // 关闭 Unicode 字节顺序标志
