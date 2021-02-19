@@ -107,7 +107,7 @@ module.exports = {
     // 注释标记的内部使用空格
     'comment-whitespace-inside': 'always',
     // 指定一个不允许出现在注释中的单词的黑名单
-    'comment-word-blacklist': [
+    'comment-word-disallowed-list': [
       [
         /^TODO:/,
         /^FIXME:/,
@@ -166,7 +166,7 @@ module.exports = {
     // 声明之前使用空行
     'declaration-empty-line-before': 'never',
     // 指定一个在声明中禁止使用的属性和值的黑名单
-    'declaration-property-value-blacklist': {
+    'declaration-property-value-disallowed-list': {
       '/^border(?!-(width|spacing))/': [
         /thin/,
         /medium/,
