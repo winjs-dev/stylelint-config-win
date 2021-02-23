@@ -287,7 +287,7 @@ module.exports = {
     // ************ Media Query ************
     // 多行媒体查询列表中的逗号后换行
     'media-query-list-comma-newline-after': 'always',
-    // 在媒体查询的逗号之前要求有一个换行符或禁止有空白
+    // 在媒体查询的逗号之前禁止有空白
     'media-query-list-comma-newline-before': 'never-multi-line',
     // 多行媒体查询列表中的逗号后面一个空格
     'media-query-list-comma-space-after': 'always-single-line',
