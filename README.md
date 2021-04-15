@@ -26,6 +26,7 @@ stylelint ^13.6.1
 ``` 
 
 - 项目目录下的 `package.json` 添加检测指令，举个例子
+
 ```diff
 {
  ...
@@ -35,8 +36,6 @@ stylelint ^13.6.1
  ...
 }
 ``` 
-
-It is recommended to use with VSCode plugin [stylelint-stzhang](https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang)
 
 ## 引用
 
