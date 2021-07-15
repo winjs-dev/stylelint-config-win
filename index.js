@@ -60,7 +60,13 @@ module.exports = {
           'include',
           'import',
           'mixin',
-          'rule'
+          'rule',
+          'while',
+          'debug',
+          'at-root',
+          'warn',
+          'error',
+          'return'
         ]
       }
     ],
