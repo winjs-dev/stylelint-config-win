@@ -449,7 +449,15 @@ module.exports = {
     'selector-pseudo-class-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['export', 'global']
+        ignorePseudoClasses: [
+          'export',
+          'global',
+          // chrome webkit scrollbar
+          'horizontal',
+          'vertical',
+          // vue3
+          'deep'
+        ]
       }
     ],
     // 在伪类选择器内的括号内不允许空格
@@ -463,7 +471,14 @@ module.exports = {
     // 伪元素指定双冒号表示
     'selector-pseudo-element-colon-notation': 'double',
     // 不允许未知的伪元素选择器
-    'selector-pseudo-element-no-unknown': true,
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: [
+          'v-deep'
+        ],
+      },
+    ],
     // 伪元素选择器白名单
     'selector-pseudo-element-whitelist': null,
     // 类型选择器指定小写

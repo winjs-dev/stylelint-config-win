@@ -1,6 +1,6 @@
 {
   "name": "@winner-fed/stylelint-config-win",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "CSS Style guide for winner fed",
   "keywords": [
     "stylelint",
