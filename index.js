@@ -172,17 +172,7 @@ module.exports = {
     // 声明之前使用空行
     'declaration-empty-line-before': 'never',
     // 指定一个在声明中禁止使用的属性和值的黑名单
-    'declaration-property-value-disallowed-list': {
-      '/^border(?!-(width|spacing))/': [
-        /thin/,
-        /medium/,
-        /thick/,
-        '0' // Prefer `none`
-      ],
-      '/^transition/': [
-        /all/
-      ]
-    },
+    'declaration-property-value-disallowed-list': null,
 
     // ************ Font family ************
     // 指定字体名称当推荐使用引号时再使用引号
@@ -197,7 +187,8 @@ module.exports = {
     // ************ Font weight ************
     // 指定 `font-weight` 的值必须是数字
     'font-weight-notation': ['named-where-possible', {
-      severity: 'warning'
+      severity: 'warning',
+      message: 'This means that only 400 and 700 will be rejected, because those are the only numbers with keyword equivalents (normal and bold).'
     }],
 
     // ************ Function ************
