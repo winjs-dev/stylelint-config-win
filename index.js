@@ -269,7 +269,7 @@ module.exports = {
     // 不允许未知的媒体特性名称
     'media-feature-name-no-unknown': true,
     // 禁止 media 特性名称带有浏览器引擎前缀
-    'media-feature-name-no-vendor-prefix': true,
+    'media-feature-name-no-vendor-prefix': null,
     // 指定允许的 media 功能名称和值对的白名单
     'media-feature-name-value-whitelist': null,
     // 指定允许使用的 media 特性名称的白名单
@@ -337,21 +337,14 @@ module.exports = {
     'property-no-unknown': [
       true,
       {
-        'ignoreProperties': ['composes']
-      }
-    ],
-    // 禁止属性使用浏览器引擎前缀
-    'property-no-vendor-prefix': [
-      true,
-      {
-        ignoreProperties: [
-          'app-region', // For Electron
-          'appearance',
-          'mask',
-          'tab-size' // It's still only prefixed in Firefox
+        'ignoreProperties': [
+          'composes',
+          'box-flex'
         ]
       }
     ],
+    // 禁止属性使用浏览器引擎前缀
+    'property-no-vendor-prefix': null,
     // 指定一个允许使用的属性的白名单
     'property-whitelist': null,
 
@@ -510,15 +503,7 @@ module.exports = {
     // 指定关键字的值的大小写
     'value-keyword-case': 'lower',
     // 允许给值添加浏览器引擎前缀
-    'value-no-vendor-prefix': [
-      true,
-      {
-        ignoreValues: [
-          'grab',
-          'grabbing'
-        ]
-      }
-    ],
+    'value-no-vendor-prefix': null,
 
     // ************ Value List ************
     // 多行值列表的逗号后换行
