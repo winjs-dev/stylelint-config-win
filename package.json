@@ -28,12 +28,16 @@
     "README.md",
     "package.json"
   ],
+  "scripts": {
+    "release": "release-it"
+  },
   "dependencies": {
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-z-index-value-constraint": "^1.1.0",
     "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
+    "release-it": "*",
     "stylelint": "^13.5.0"
   },
   "peerDependencies": {
