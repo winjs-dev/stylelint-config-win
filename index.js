@@ -185,7 +185,7 @@ module.exports = {
     }],
 
     // ************ Font weight ************
-    // 指定 `font-weight` 的值必须是数字
+    // 指定 `font-weight` 的值必须是名字
     'font-weight-notation': ['named-where-possible', {
       severity: 'warning',
       message: 'This means that only 400 and 700 will be rejected, because those are the only numbers with keyword equivalents (normal and bold).'
