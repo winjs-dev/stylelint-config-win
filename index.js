@@ -180,7 +180,7 @@ module.exports = {
     // 禁止使用重复的字体名称
     'font-family-no-duplicate-names': true,
     // 推荐在字体系列名称列表中使用通用系列
-    'font-family-no-missing-generic-family-keyword': [true,  {
+    'font-family-no-missing-generic-family-keyword': [true, {
       severity: 'warning'
     }],
 
@@ -460,8 +460,8 @@ module.exports = {
       {
         ignorePseudoElements: [
           'v-deep'
-        ],
-      },
+        ]
+      }
     ],
     // 伪元素选择器白名单
     'selector-pseudo-element-whitelist': null,
@@ -501,7 +501,11 @@ module.exports = {
 
     // ************ Value ************
     // 指定关键字的值的大小写
-    'value-keyword-case': 'lower',
+    // 指定关键字的值的大小写
+    'value-keyword-case': ['lower', {
+        ignoreProperties: [/-webkit-*/, /-moz-*/, /-o-*/, /-ms-*/]
+      }
+    ],
     // 允许给值添加浏览器引擎前缀
     'value-no-vendor-prefix': null,
 
