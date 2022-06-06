@@ -269,7 +269,7 @@ module.exports = {
     // 不允许未知的媒体特性名称
     'media-feature-name-no-unknown': true,
     // 禁止 media 特性名称带有浏览器引擎前缀
-    'media-feature-name-no-vendor-prefix': null,
+    'media-feature-name-no-vendor-prefix': true,
     // 指定允许的 media 功能名称和值对的白名单
     'media-feature-name-value-whitelist': null,
     // 指定允许使用的 media 特性名称的白名单
@@ -344,7 +344,19 @@ module.exports = {
       }
     ],
     // 禁止属性使用浏览器引擎前缀
-    'property-no-vendor-prefix': null,
+    'property-no-vendor-prefix': [
+      true,
+      {
+        ignoreProperties: [
+          'app-region', // For Electron
+          'appearance',
+          'mask',
+          'tab-size', // It's still only prefixed in Firefox
+          'composes',
+          'box-flex'
+        ]
+      }
+    ],
     // 指定一个允许使用的属性的白名单
     'property-whitelist': null,
 
@@ -503,12 +515,19 @@ module.exports = {
     // 指定关键字的值的大小写
     // 指定关键字的值的大小写
     'value-keyword-case': ['lower', {
-        ignoreProperties: [/-webkit-*/, /-moz-*/, /-o-*/, /-ms-*/]
-      }
+      ignoreProperties: [/-webkit-*/, /-moz-*/, /-o-*/, /-ms-*/]
+    }
     ],
     // 允许给值添加浏览器引擎前缀
-    'value-no-vendor-prefix': null,
-
+    'value-no-vendor-prefix': [
+      true,
+      {
+        ignoreValues: [
+          'grab',
+          'grabbing'
+        ]
+      }
+    ],
     // ************ Value List ************
     // 多行值列表的逗号后换行
     'value-list-comma-newline-after': 'always-multi-line',
