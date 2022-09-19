@@ -48,6 +48,7 @@
   },
   "homepage": "https://github.com/cloud-templates/stylelint-config-win#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
