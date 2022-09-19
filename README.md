@@ -11,7 +11,7 @@ yarn add @winner-fed/stylelint-config-win -D
 
 ##  依赖版本
 ```bash
-stylelint ^13.6.1
+stylelint ^14.11.0
 ```
 *Tips*：如果项目中没有安装此依赖包或者版本不一致，请安装或者升级。 
 
@@ -49,4 +49,4 @@ stylelint ^13.6.1
 
 > Node.js >= 8
 
-> stylelint >= 13.5.0
+> stylelint >= 14.11.0
