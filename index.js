@@ -28,7 +28,9 @@ module.exports = {
   rules: {
     // ************ At-rule ************
     // 指定一个禁止使用的 at 规则的黑名单
-    'at-rule-blacklist': null,
+    // FIXME
+    // stylelint14 移除此规则
+    // 'at-rule-blacklist': null,
     // 要求或禁止使用空行 always-有必须有空行 never-之前不加空行
     // except 辅助选项
     'at-rule-empty-line-before': ['always',
@@ -73,13 +75,18 @@ module.exports = {
     // 禁止 at 规则使用浏览器引擎前缀
     'at-rule-no-vendor-prefix': null,
     // 指定属性的需求列表
-    'at-rule-property-requirelist': null,
+    // FIXME
+    // stylelint14
+    // 将 at-rule-property-requirelist 调整为 at-rule-property-required-list
+    'at-rule-property-required-list': null,
     // 分号后需要换行符
     'at-rule-semicolon-newline-after': 'always',
     // 分号前需要空格
     'at-rule-semicolon-space-before': 'never',
     // 指定一个允许使用的 at 规则的白名单
-    'at-rule-whitelist': null,
+    // FIXME
+    // stylelint14 移除此规则
+    // 'at-rule-whitelist': null,
 
     // ************ Block ************
     // 块关闭括号（右括号）禁止使用空行
@@ -193,9 +200,13 @@ module.exports = {
 
     // ************ Function ************
     // 指定禁用函数的黑名单：暂无
-    'function-blacklist': null,
+    // FIXME
+    // stylelint14 移除此规则
+    // 'function-blacklist': null,
     // 禁止在calc函数内使用无效的表达式
-    'function-calc-no-invalid': true,
+    // FIXME
+    // stylelint14 移除此规则
+    // 'function-calc-no-invalid': true,
     // 禁止在 calc 函数内使用不加空格的操作符
     'function-calc-no-unspaced-operator': true,
     // 禁止多行函数的逗号后有空白
@@ -221,9 +232,15 @@ module.exports = {
     // 要求或禁止 url 使用引号
     'function-url-quotes': 'always',
     // 指定一个允许的 url 协议的白名单
-    'function-url-scheme-whitelist': null,
+    // FIXME
+    // stylelint14
+    // function-url-scheme-whitelist 调整为 function-url-scheme-allowed-list
+    'function-url-scheme-allowed-list': null,
     // 指定一个允许的函数的白名单
-    'function-whitelist': null,
+    // FIXME
+    // stylelint14
+    // function-whitelist 调整为 function-allowed-list
+    'function-allowed-list': null,
     // 要求函数后有空格
     'function-whitespace-after': 'always',
 
@@ -263,7 +280,10 @@ module.exports = {
     // media功能中的冒号前不加空格
     'media-feature-colon-space-before': 'never',
     // 指定禁止使用的 media 特性名称的黑名单
-    'media-feature-name-blacklist': null,
+    // FIXME
+    // stylelint14
+    // media-feature-name-blacklist 调整为 media-feature-name-disallowed-list
+    'media-feature-name-disallowed-list': null,
     // media功能名称的小写
     'media-feature-name-case': 'lower',
     // 不允许未知的媒体特性名称
@@ -271,9 +291,15 @@ module.exports = {
     // 禁止 media 特性名称带有浏览器引擎前缀
     'media-feature-name-no-vendor-prefix': true,
     // 指定允许的 media 功能名称和值对的白名单
-    'media-feature-name-value-whitelist': null,
+    // FIXME
+    // stylelint14
+    // media-feature-name-value-whitelist 调整为 media-feature-name-value-allowed-list
+    'media-feature-name-value-allowed-list': null,
     // 指定允许使用的 media 特性名称的白名单
-    'media-feature-name-whitelist': null,
+    // FIXME
+    // stylelint14
+    // media-feature-name-whitelist 调整为 media-feature-name-allowed-list
+    'media-feature-name-allowed-list': null,
     // media功能中括号内不允许空格
     'media-feature-parentheses-space-inside': 'never',
     // media功能中，范围运算符后需要一个空格
@@ -330,7 +356,10 @@ module.exports = {
 
     // ************ Property ************
     // 指定一个禁止使用的属性的黑名单
-    'property-blacklist': null,
+    // FIXME
+    // stylelint14
+    // property-blacklist 调整为 property-disallowed-list
+    'property-disallowed-list': null,
     // 属性指定小写
     'property-case': 'lower',
     // 禁止使用未知属性
@@ -358,7 +387,10 @@ module.exports = {
       }
     ],
     // 指定一个允许使用的属性的白名单
-    'property-whitelist': null,
+    // FIXME
+    // stylelint14
+    // property-whitelist 调整为 property-allowed-list
+    'property-allowed-list': null,
 
     // 多条规则前空行
     'rule-empty-line-before': [
@@ -378,25 +410,37 @@ module.exports = {
     // 属性选择器内的括号内不允许空格
     'selector-attribute-brackets-space-inside': 'never',
     // 指定一个禁止使用的特性(attribute)操作符的黑名单
-    'selector-attribute-operator-blacklist': null,
+    // FIXME
+    // stylelint14
+    // selector-attribute-operator-blacklist 调整为 selector-attribute-operator-disallowed-list
+    'selector-attribute-operator-disallowed-list': null,
     // 属性选择器内的运算符后不允许空格
     'selector-attribute-operator-space-after': 'never',
     // 属性选择器内的运算符前不允许空格
     'selector-attribute-operator-space-before': 'never',
     // 指定一个禁止使用的特性(attribute)操作符的白名单
-    'selector-attribute-operator-whitelist': null,
+    // FIXME
+    // stylelint14
+    // selector-attribute-operator-whitelist 调整为 selector-attribute-operator-allowed-list
+    'selector-attribute-operator-allowed-list': null,
     // 要求特性值使用引号 [target="_blank"]
     'selector-attribute-quotes': 'always',
     // 伪类选择器指定一个匹配模式
     'selector-class-pattern': reName,
     // 选择器的组合黑名单
-    'selector-combinator-blacklist': null,
+    // FIXME
+    // stylelint14
+    // selector-combinator-disallowed-list 调整为 selector-combinator-disallowed-list
+    'selector-combinator-disallowed-list': null,
     // 选择器的组合符后一个空格 a + b
     'selector-combinator-space-after': 'always',
     // 选择器的组合符前一个空格
     'selector-combinator-space-before': 'always',
     // 选择器的组合白名单
-    'selector-combinator-whitelist': null,
+    // FIXME
+    // stylelint14
+    // selector-combinator-whitelist 调整为 selector-combinator-allowed-list
+    'selector-combinator-allowed-list': null,
     // 不允许选择器的后代组合器使用非空格字符
     'selector-descendant-combinator-no-non-space': true,
     // 指定一个 id 选择器的匹配模式
@@ -438,7 +482,11 @@ module.exports = {
     // 禁止使用浏览器引擎前缀
     'selector-no-vendor-prefix': null,
     // 指定一个禁止使用的伪类选择器的黑名单
-    'selector-pseudo-class-blacklist': null,
+    // 选择器的组合白名单
+    // FIXME
+    // stylelint14
+    // selector-pseudo-class-blacklist 调整为 selector-pseudo-class-disallowed-list
+    'selector-pseudo-class-disallowed-list': null,
     // 伪类选择器指定小写
     'selector-pseudo-class-case': 'lower',
     // 不允许未知的伪类选择器
@@ -459,9 +507,15 @@ module.exports = {
     // 在伪类选择器内的括号内不允许空格
     'selector-pseudo-class-parentheses-space-inside': 'never',
     // 指定一个禁止使用的伪类选择器的白名单
-    'selector-pseudo-class-whitelist': null,
+    // FIXME
+    // stylelint14
+    // selector-pseudo-class-whitelist 调整为 selector-pseudo-class-allowed-list
+    'selector-pseudo-class-allowed-list': null,
     // 伪元素选择器黑名单
-    'selector-pseudo-element-blacklist': null,
+    // FIXME
+    // stylelint14
+    // selector-pseudo-element-blacklist 调整为 selector-pseudo-element-disallowed-list
+    'selector-pseudo-element-disallowed-list': null,
     // 伪元素选择器指定小写
     'selector-pseudo-element-case': 'lower',
     // 伪元素指定双冒号表示
@@ -476,7 +530,10 @@ module.exports = {
       }
     ],
     // 伪元素选择器白名单
-    'selector-pseudo-element-whitelist': null,
+    // FIXME
+    // stylelint14
+    // selector-pseudo-element-whitelist 调整为 selector-pseudo-element-allowed-list
+    'selector-pseudo-element-allowed-list': null,
     // 类型选择器指定小写
     'selector-type-case': 'lower',
     // 不允许未知类型选择器
@@ -503,13 +560,19 @@ module.exports = {
     // 关闭 Unicode 字节顺序标志
     'unicode-bom': 'never',
     // 指定一个禁止使用的单位的黑名单
-    'unit-blacklist': null,
+    // FIXME
+    // stylelint14
+    // unit-blacklist 调整为 unit-disallowed-list
+    'unit-disallowed-list': null,
     // 单位的小写
     'unit-case': null,
     // 禁止未知的单位
     'unit-no-unknown': true,
     // 指定一个所允许的单位的白名单
-    'unit-whitelist': null,
+    // FIXME
+    // stylelint14
+    // unit-whitelist 调整为 unit-allowed-list
+    'unit-allowed-list': null,
 
     // ************ Value ************
     // 指定关键字的值的大小写
