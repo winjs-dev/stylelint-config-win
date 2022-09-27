@@ -1,7 +1,8 @@
 # stylelint-config-win
 
 团队内部的stylelint配置
-
+ 
+**注意：** stylelint 14 版本和 stylelint 13 是不兼容的，有很大的初入。升级的时候需要特别注意。更新日志可见：[这里](https://stylelint.io/CHANGELOG)
 
 ## 安装
 
