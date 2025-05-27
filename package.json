@@ -22,14 +22,27 @@
     "url": "git+https://github.com/cloud-templates/stylelint-config-win.git"
   },
   "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "index.js",
+    "index.mjs",
+    "index.cjs",
+    "lib/",
     "properties-order.js",
     "README.md",
     "package.json"
   ],
   "scripts": {
-    "release": "bumpp --commit --push --tag && npm publish"
+    "verify": "node scripts/verify.js",
+    "release": "npm run verify && bumpp --commit --push --tag && npm publish"
   },
   "dependencies": {
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
