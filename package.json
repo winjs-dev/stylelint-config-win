@@ -1,6 +1,6 @@
 {
   "name": "@winner-fed/stylelint-config-win",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "CSS Style guide for winner fed",
   "keywords": [
     "stylelint",
@@ -57,9 +57,9 @@
     "stylelint": ">=13.5.0"
   },
   "bugs": {
-    "url": "https://github.com/cloud-templates/stylelint-config-win/issues"
+    "url": "https://github.com/winjs-dev/stylelint-config-win/issues"
   },
-  "homepage": "https://github.com/cloud-templates/stylelint-config-win#readme",
+  "homepage": "https://github.com/winjs-dev/stylelint-config-win#readme",
   "publishConfig": {
     "access": "public"
   }
